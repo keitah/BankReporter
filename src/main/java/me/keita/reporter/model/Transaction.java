@@ -6,8 +6,9 @@ public class Transaction {
     private String account;
     private String description;
     private BigDecimal amount;
+    private BigDecimal balanceAfter;
 
-    public Transaction() { }
+    public Transaction() {}
 
     public Transaction(String account, String description, BigDecimal amount) {
         this.account = account;
@@ -24,12 +25,11 @@ public class Transaction {
     public BigDecimal getAmount() { return amount; }
     public void setAmount(BigDecimal amount) { this.amount = amount; }
 
+    public BigDecimal getBalanceAfter() { return balanceAfter; }
+    public void setBalanceAfter(BigDecimal balanceAfter) { this.balanceAfter = balanceAfter; }
+
     @Override
     public String toString() {
-        return "Transaction{" +
-                "account='" + account + '\'' +
-                ", description='" + description + '\'' +
-                ", amount=" + amount +
-                '}';
+        return account + " | " + description + " | " + amount + " | Balance: " + balanceAfter;
     }
 }

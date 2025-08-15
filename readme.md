@@ -14,6 +14,7 @@
 - 🔗 Чтение данных из файлов **JSON**
 - 📊 Консольная обработка и вывод информации
 - 🛠 Код легко расширяемый для новых форматов и функций
+- 📁 Сохраняет результат в "*./BankReporter/output*"
 
 ---
 
@@ -48,34 +49,70 @@
 
 **Пример CSV:**
 ```json
-CSV parsed:
-Transaction{account='123455', description='TEST_TRANSCATION', amount=11.00}
-Transaction{account='123455', description='покупка 1', amount=123.00}
-Transaction{account='123455', description='sim', amount=0.04}
+account,description,amount
+123455,TEST_TRANSACTION,11.00
+123455,покупка 1,123.00
+123455,sim,0.04
+123456,зарплата,-500.00
+123457,кофе,5.50
 ```
 **Пример JSON:**
 ```json
-JSON parsed:
-Transaction{account='123455', description='TEST_TRANSCATION', amount=11.00}
-Transaction{account='123455', description='покупка 1', amount=123.00}
-Transaction{account='123455', description='sim', amount=0.04}
+[
+   {
+      "account": "123455",
+      "description": "TEST_TRANSACTION",
+      "amount": 11.00
+   },
+   {
+      "account": "123455",
+      "description": "покупка 1",
+      "amount": 123.00
+   },
+   {
+      "account": "123455",
+      "description": "sim",
+      "amount": 0.04
+   },
+   {
+      "account": "123456",
+      "description": "зарплата",
+      "amount": -500.00
+   },
+   {
+      "account": "123457",
+      "description": "кофе",
+      "amount": 5.50
+   }
+]
+
 ```
 **Консольный вывод:**
 ```yaml
-> Task :me.keita.reporter.Main.main()
-CSV parsed:
-   Transaction{account='123455', description='TEST_TRANSCATION', amount=11.00}
-   Transaction{account='123455', description='покупка 1', amount=123.00}
-   Transaction{account='123455', description='sim', amount=0.04}
-JSON parsed:
-   Transaction{account='123455', description='TEST_TRANSCATION', amount=11.00}
-   Transaction{account='123455', description='покупка 1', amount=123.00}
-   Transaction{account='123455', description='sim', amount=0.04} 
+CSV Transactions:
+123455 | TEST_TRANSACTION | 11.00 | Balance: 989.00
+123455 | покупка 1 | 123.00 | Balance: 866.00
+123455 | sim | 0.04 | Balance: 865.96
+123456 | зарплата | -500.00 | Balance: 1365.96
+123457 | кофе | 5.50 | Balance: 1360.46
+
+CSV summary: Initial=1000.00, Income=500.00, Expense=139.54, Final=1360.46
+
+JSON Transactions:
+123455 | TEST_TRANSACTION | 11.00 | Balance: 989.00
+123455 | покупка 1 | 123.00 | Balance: 866.00
+123455 | sim | 0.04 | Balance: 865.96
+123456 | зарплата | -500.00 | Balance: 1365.96
+123457 | кофе | 5.50 | Balance: 1360.46
+
+JSON summary: Initial=1000.00, Income=500.00, Expense=139.54, Final=1360.46
 ```
+
+#### Сохраняет результат в 📁"*./BankReporter/output*"
 ## 📈 Планы на будущее
 
 - 📊 Поддержка Excel (.xlsx)
-- 🔍 Расширенный анализ: суммирование, группировка по категориям
+- 🔍 Расширенный анализ: группировка по категориям
 - 🖥 Графический интерфейс (GUI)
 - ⚡ Оптимизация и обработка больших файлов
 

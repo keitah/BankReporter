@@ -1,0 +1,26 @@
+[ {
+  "account" : "123455",
+  "description" : "TEST_TRANSACTION",
+  "amount" : 11.00,
+  "balanceAfter" : 989.00
+}, {
+  "account" : "123455",
+  "description" : "покупка 1",
+  "amount" : 123.00,
+  "balanceAfter" : 866.00
+}, {
+  "account" : "123455",
+  "description" : "sim",
+  "amount" : 0.04,
+  "balanceAfter" : 865.96
+}, {
+  "account" : "123456",
+  "description" : "зарплата",
+  "amount" : -500.00,
+  "balanceAfter" : 1365.96
+}, {
+  "account" : "123457",
+  "description" : "кофе",
+  "amount" : 5.50,
+  "balanceAfter" : 1360.46
+} ]

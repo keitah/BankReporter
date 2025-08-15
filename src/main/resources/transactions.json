@@ -1,5 +1,0 @@
-[
-  { "account": "123455", "description": "TEST_TRANSCATION", "amount": 11.00 },
-  { "account": "123455", "description": "покупка 1", "amount": 123.00 },
-  { "account": "123455", "description": "sim", "amount": 0.04 }
-]
