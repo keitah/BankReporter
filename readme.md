@@ -47,23 +47,30 @@
 ## 🚀 Примеры работы
 
 **Пример CSV:**
-```csv
-Дата,Сумма,Тип
-2025-08-15,5000,Доход
-2025-08-16,1500,Расход
+```json
+CSV parsed:
+Transaction{account='123455', description='TEST_TRANSCATION', amount=11.00}
+Transaction{account='123455', description='покупка 1', amount=123.00}
+Transaction{account='123455', description='sim', amount=0.04}
 ```
 **Пример JSON:**
 ```json
-[
-  {"date":"2025-08-15","amount":5000,"type":"Доход"},
-  {"date":"2025-08-16","amount":1500,"type":"Расход"}
-]
+JSON parsed:
+Transaction{account='123455', description='TEST_TRANSCATION', amount=11.00}
+Transaction{account='123455', description='покупка 1', amount=123.00}
+Transaction{account='123455', description='sim', amount=0.04}
 ```
 **Консольный вывод:**
 ```yaml
-Общий доход: 5000
-Общий расход: 1500
-Баланс: 3500
+> Task :me.keita.reporter.Main.main()
+CSV parsed:
+   Transaction{account='123455', description='TEST_TRANSCATION', amount=11.00}
+   Transaction{account='123455', description='покупка 1', amount=123.00}
+   Transaction{account='123455', description='sim', amount=0.04}
+JSON parsed:
+   Transaction{account='123455', description='TEST_TRANSCATION', amount=11.00}
+   Transaction{account='123455', description='покупка 1', amount=123.00}
+   Transaction{account='123455', description='sim', amount=0.04} 
 ```
 ## 📈 Планы на будущее
 
